@@ -65,7 +65,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Section Contenu */}
           <div className="lg:w-3/5 space-y-8">
             <div className="space-y-4">
               <h1 className="text-5xl font-bold text-gray-900">

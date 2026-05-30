@@ -1,5 +1,6 @@
 import { Code, Globe, Smartphone, Zap, CheckCircle } from 'lucide-react';
 import { ImageWithFallback } from '../components/I_dontKnow/ImageWithFallback';
+import {NavigateToYMCAMadaOrFomr,Params} from "../components/I_dontKnow/ContactAndJoin"
 
 export default function WebDev() {
   const projects = [
@@ -27,19 +28,6 @@ export default function WebDev() {
         'Notifications push',
         'Gestion des équipes',
         'Rapports et analytics'
-      ]
-    },
-    {
-      title: 'Portail Éducatif en Ligne',
-      description: 'Plateforme d\'apprentissage en ligne avec cours vidéos, quiz interactifs, suivi de progression et certificats. Système de gestion pour enseignants et étudiants.',
-      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
-      technologies: ['Next.js', 'PostgreSQL', 'AWS S3', 'WebRTC'],
-      features: [
-        'Cours vidéos streaming',
-        'Quiz et évaluations',
-        'Suivi de progression',
-        'Classes virtuelles live',
-        'Certificats automatiques'
       ]
     }
   ];
@@ -159,7 +147,7 @@ export default function WebDev() {
 
       {/* Services Section */}
       <section className="container mx-auto px-6 py-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Nos Services Web</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Nos supers pouvoir dans le domaine du Web</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
             {
@@ -197,7 +185,7 @@ export default function WebDev() {
           <p className="text-xl mb-8 opacity-90">
             Contactez-nous pour discuter de votre projet
           </p>
-          <button className="px-10 py-4 bg-white text-red-600 font-bold rounded-lg hover:bg-gray-100 transition-colors shadow-xl">
+          <button onClick={() => NavigateToYMCAMadaOrFomr(Params.Contact)} className="px-10 py-4 bg-white text-red-600 font-bold rounded-lg hover:bg-gray-100 transition-colors shadow-xl">
             Démarrer un projet
           </button>
         </div>

@@ -1,5 +1,6 @@
 import { Palette, Layers, PenTool, CheckCircle } from 'lucide-react';
 import { ImageWithFallback } from '../components/I_dontKnow/ImageWithFallback';
+import {NavigateToYMCAMadaOrFomr,Params} from '../components/I_dontKnow/ContactAndJoin'
 
 export default function Design() {
   const projects = [
@@ -14,32 +15,6 @@ export default function Design() {
         'Templates documents',
         'Guidelines de marque',
         'Assets réseaux sociaux'
-      ]
-    },
-    {
-      title: 'Magazine Numérique Interactif',
-      description: 'Publication numérique mensuelle avec mise en page sophistiquée, infographies interactives, vidéos intégrées et animations pour expérience de lecture enrichie.',
-      image: 'https://images.unsplash.com/photo-1720293315623-24354129a174?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
-      technologies: ['InDesign', 'After Effects', 'Premiere Pro', 'XD'],
-      features: [
-        'Mise en page responsive',
-        'Infographies animées',
-        'Contenu multimédia intégré',
-        'Navigation interactive',
-        'Export multi-formats'
-      ]
-    },
-    {
-      title: 'Packaging Produit Premium',
-      description: 'Design de packaging haut de gamme avec finitions spéciales, illustration personnalisée et conception structurelle innovante pour marque de cosmétiques bio.',
-      image: 'https://images.unsplash.com/photo-1761746395622-5f7e0e7b4ec7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
-      technologies: ['Illustrator', 'Dimension', 'Photoshop', 'Substance'],
-      features: [
-        'Design structurel 3D',
-        'Illustrations sur mesure',
-        'Maquettes réalistes',
-        'Spécifications impression',
-        'Prototypage physique'
       ]
     }
   ];
@@ -201,7 +176,7 @@ Rejoignez-nous pour aiguiser votre œil artistique, maîtriser les meilleurs out
           <p className="text-xl mb-8 opacity-90">
             Collaborons sur votre prochain projet graphique
           </p>
-          <button className="px-10 py-4 bg-white text-red-600 font-bold rounded-lg hover:bg-gray-100 transition-colors shadow-xl">
+          <button onClick={() => NavigateToYMCAMadaOrFomr(Params.Contact)} className="px-10 py-4 bg-white text-red-600 font-bold rounded-lg hover:bg-gray-100 transition-colors shadow-xl">
             Brief créatif
           </button>
         </div>

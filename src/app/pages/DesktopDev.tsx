@@ -1,45 +1,20 @@
 import { Monitor, Layers, Zap, CheckCircle } from 'lucide-react';
 import { ImageWithFallback } from '../components/I_dontKnow/ImageWithFallback';
+import { NavigateToYMCAMadaOrFomr,Params } from '../components/I_dontKnow/ContactAndJoin';
 
 export default function DesktopDev() {
   const projects = [
     {
-      title: 'Logiciel de Comptabilité Professionnel',
-      description: 'Suite complète de gestion comptable pour PME avec facturation, gestion de stocks, reporting financier avancé et conformité fiscale automatisée.',
-      image: 'https://images.unsplash.com/photo-1587831990711-23ca6441447b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
-      technologies: ['Electron', 'React', 'SQLite', 'Node.js'],
-      features: [
-        'Facturation automatisée',
-        'Gestion multi-devises',
-        'Rapports financiers détaillés',
-        'Synchronisation cloud',
-        'Export comptable standardisé'
-      ]
-    },
-    {
       title: 'Éditeur de Contenu Multimédia',
       description: 'Application desktop de création et édition vidéo professionnelle avec effets en temps réel, montage multi-pistes et export dans tous les formats populaires.',
       image: 'https://images.unsplash.com/photo-1619597455322-4fbbd820250a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
-      technologies: ['C++', 'Qt', 'FFmpeg', 'OpenGL'],
+      technologies: ['Python', 'PyQt', 'FFmpeg', ],
       features: [
         'Montage vidéo multi-pistes',
         'Effets et transitions en temps réel',
         'Support 4K/8K',
         'Accélération GPU',
         'Export optimisé tous formats'
-      ]
-    },
-    {
-      title: 'Système de Gestion Hospitalière',
-      description: 'Plateforme complète pour hôpitaux avec gestion des patients, planification des rendez-vous, dossiers médicaux électroniques et système de facturation intégré.',
-      image: 'https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
-      technologies: ['C#', '.NET', 'WPF', 'SQL Server'],
-      features: [
-        'Dossiers médicaux électroniques',
-        'Gestion de rendez-vous',
-        'Prescription électronique',
-        'Facturation automatique',
-        'Statistiques et rapports'
       ]
     }
   ];
@@ -159,8 +134,8 @@ Rejoignez-nous pour concevoir des outils performants, booster vos compétences e
 
       {/* Services Section */}
       <section className="container mx-auto px-6 py-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Nos Services Desktop</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Le type d'application que nous concevons</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {[
             {
               icon: Monitor,
@@ -171,12 +146,7 @@ Rejoignez-nous pour concevoir des outils performants, booster vos compétences e
               icon: Layers,
               title: 'Cross-Platform',
               description: 'Développement multiplateforme Windows, macOS et Linux'
-            },
-            {
-              icon: Zap,
-              title: 'Haute Performance',
-              description: 'Applications optimisées avec accès direct aux ressources système'
-            },
+            }
           ].map((service, index) => (
             <div
               key={index}
@@ -194,10 +164,10 @@ Rejoignez-nous pour concevoir des outils performants, booster vos compétences e
       <section className="bg-gradient-to-r from-red-600 to-red-700 text-white py-16">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-4">Besoin d'un logiciel desktop ?</h2>
-          <p className="text-xl mb-8 opacity-90">
-            Développons ensemble votre solution desktop professionnelle
+          <p className="text-xl mb-8 opacity-90"> 
+            Nous sommes en mésure d'en créer à petit prix dans le but de vous présenter nos expértises
           </p>
-          <button className="px-10 py-4 bg-white text-red-600 font-bold rounded-lg hover:bg-gray-100 transition-colors shadow-xl">
+          <button onClick={() => NavigateToYMCAMadaOrFomr(Params.Contact)} className="px-10 py-4 bg-white text-red-600 font-bold rounded-lg hover:bg-gray-100 transition-colors shadow-xl">
             Discuter de votre projet
           </button>
         </div>

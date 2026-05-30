@@ -10,9 +10,7 @@ export default function Layout() {
   const navItems = [
     { path: '/', label: 'Accueil' },
     { path: '/web', label: 'Web', icon: Code },
-    { path: '/mobile', label: 'Mobile', icon: Smartphone },
     { path: '/desktop', label: 'Desktop', icon: Monitor },
-    { path: '/ai', label: 'IA', icon: Bot },
     { path: '/robotics', label: 'Robotique', icon: Cpu },
     { path: '/automation', label: 'Automatisation', icon: Zap },
     { path: '/design', label: 'Design', icon: Palette },

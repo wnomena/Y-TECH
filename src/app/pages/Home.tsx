@@ -1,6 +1,7 @@
 import { Link } from 'react-router';
 import { Code, Smartphone, Monitor, Bot, Cpu, Palette, Zap, Wrench, ArrowRight } from 'lucide-react';
 import logoImage from '../../imports/image.png';
+import { NavigateToYMCAMadaOrFomr, Params } from '../components/I_dontKnow/ContactAndJoin';
 
 export default function Home() {
   const services = [
@@ -12,24 +13,10 @@ export default function Home() {
       color: 'text-red-600'
     },
     {
-      icon: Smartphone,
-      title: 'Développement Mobile',
-      description: 'Applications iOS et Android natives',
-      link: '/mobile',
-      color: 'text-red-600'
-    },
-    {
       icon: Monitor,
       title: 'Développement Desktop',
       description: 'Logiciels multiplateformes professionnels',
       link: '/desktop',
-      color: 'text-red-600'
-    },
-    {
-      icon: Bot,
-      title: 'Intelligence Artificielle',
-      description: 'Solutions IA et Machine Learning',
-      link: '/ai',
       color: 'text-red-600'
     },
     {
@@ -73,7 +60,7 @@ export default function Home() {
               <img
                 src={logoImage}
                 alt="Y-TECH Logo"
-                className="w-80 h-80 object-contain drop-shadow-2xl animate-pulse"
+                className="w-80 h-80 object-contain drop-shadow-2xl"
               />
             </div>
           </div>
@@ -103,7 +90,7 @@ export default function Home() {
               >
                 Découvrir nos projets
               </Link>
-              <button className="px-8 py-3 bg-gray-800 text-white font-semibold rounded-lg hover:bg-gray-900 transition-colors shadow-lg hover:shadow-xl">
+              <button onClick={() => NavigateToYMCAMadaOrFomr(Params.Join)} className="px-8 py-3 bg-gray-800 text-white font-semibold rounded-lg hover:bg-gray-900 transition-colors shadow-lg hover:shadow-xl">
                 Rejoindre le club
               </button>
             </div>
@@ -153,7 +140,7 @@ export default function Home() {
           <p className="text-xl mb-8 opacity-90">
             Faites partie de la communauté Y-TECH et développez vos compétences technologiques
           </p>
-          <button className="px-10 py-4 bg-white text-red-600 font-bold rounded-lg hover:bg-gray-100 transition-colors shadow-xl">
+          <button onClick={() => NavigateToYMCAMadaOrFomr(Params.Contact)} className="px-10 py-4 bg-white text-red-600 font-bold rounded-lg hover:bg-gray-100 transition-colors shadow-xl">
             Contactez-nous
           </button>
         </div>

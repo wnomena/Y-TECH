@@ -1,48 +1,8 @@
 import { Wrench, CircuitBoard, Cpu, CheckCircle } from 'lucide-react';
-import { ImageWithFallback } from '../components/I_dontKnow/ImageWithFallback';
+import { Params,NavigateToYMCAMadaOrFomr } from '../components/I_dontKnow/ContactAndJoin';
 
 export default function Electronics() {
-  const projects = [
-    {
-      title: 'Système Domotique IoT',
-      description: 'Solution domotique complète avec capteurs sans fil, contrôle centralisé, automatisation par IA et application mobile. Gestion énergétique intelligente et sécurité intégrée.',
-      image: 'https://images.unsplash.com/photo-1562408590-e32931084e23?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
-      technologies: ['ESP32', 'MQTT', 'LoRaWAN', 'PCB Design'],
-      features: [
-        'Capteurs environnementaux multi-zones',
-        'Contrôle éclairage et chauffage',
-        'Sécurité avec détection intrusion',
-        'Économie d\'énergie automatisée',
-        'Interface mobile temps réel'
-      ]
-    },
-    {
-      title: 'Wearable de Santé Connecté',
-      description: 'Dispositif portable de monitoring santé avec ECG, oxymètre, accéléromètre et GPS. Autonomie longue durée et synchronisation cloud pour suivi médical.',
-      image: 'https://images.unsplash.com/photo-1592659762303-90081d34b277?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
-      technologies: ['ARM Cortex-M', 'Bluetooth LE', 'Altium Designer', 'FreeRTOS'],
-      features: [
-        'Monitoring ECG continu',
-        'Oxymétrie et température',
-        'Détection de chutes',
-        'Batterie 7 jours',
-        'Étanchéité IP68'
-      ]
-    },
-    {
-      title: 'Station Météo Professionnelle',
-      description: 'Station météo autonome avec mesures multi-paramètres, transmission satellite, alimentation solaire et datalogger pour applications scientifiques et agricoles.',
-      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
-      technologies: ['STM32', 'Solar Power', 'LoRa', 'KiCad'],
-      features: [
-        'Mesures température/humidité/pression',
-        'Anémomètre et pluviomètre',
-        'Transmission satellite',
-        'Alimentation solaire autonome',
-        'Datalogger haute capacité'
-      ]
-    }
-  ];
+  const projects = [];
 
   return (
     <div className="min-h-screen">
@@ -88,87 +48,11 @@ export default function Electronics() {
         </div>
       </section>
 
-      {/* Projects Section */}
-      <section className="bg-white py-16">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Projets <span className="text-red-600">Électroniques</span>
-            </h2>
-            <p className="text-xl text-gray-600">
-              Systèmes embarqués et IoT innovants
-            </p>
-          </div>
-
-          <div className="space-y-16">
-            {projects.map((project, index) => (
-              <div
-                key={index}
-                className={`flex flex-col lg:flex-row gap-8 items-center ${
-                  index % 2 === 1 ? 'lg:flex-row-reverse' : ''
-                }`}
-              >
-                <div className="lg:w-1/2">
-                  <ImageWithFallback
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-80 object-cover rounded-xl shadow-2xl"
-                  />
-                </div>
-                <div className="lg:w-1/2 space-y-6">
-                  <div>
-                    <h3 className="text-3xl font-bold text-gray-900 mb-3">{project.title}</h3>
-                    <p className="text-gray-700 leading-relaxed text-lg">{project.description}</p>
-                  </div>
-
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
-                      <Cpu className="w-5 h-5 text-red-600" />
-                      Composants et technologies
-                    </h4>
-                    <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech, idx) => (
-                        <span
-                          key={idx}
-                          className="px-4 py-2 bg-red-50 text-red-600 rounded-full text-sm font-semibold"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
-                      <CheckCircle className="w-5 h-5 text-red-600" />
-                      Caractéristiques techniques
-                    </h4>
-                    <ul className="space-y-2">
-                      {project.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center gap-2 text-gray-700">
-                          <div className="w-2 h-2 bg-red-600 rounded-full"></div>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Services Section */}
       <section className="container mx-auto px-6 py-16">
         <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Expertises Électroniques</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {[
-            {
-              icon: CircuitBoard,
-              title: 'Conception PCB',
-              description: 'Design de circuits imprimés professionnels multi-couches optimisés'
-            },
             {
               icon: Cpu,
               title: 'Systèmes Embarqués',
@@ -199,7 +83,7 @@ export default function Electronics() {
           <p className="text-xl mb-8 opacity-90">
             De l'idée au prototype fonctionnel, accompagnement complet
           </p>
-          <button className="px-10 py-4 bg-white text-red-600 font-bold rounded-lg hover:bg-gray-100 transition-colors shadow-xl">
+          <button onClick={() => NavigateToYMCAMadaOrFomr(Params.Contact)} className="px-10 py-4 bg-white text-red-600 font-bold rounded-lg hover:bg-gray-100 transition-colors shadow-xl">
             Consultation technique
           </button>
         </div>

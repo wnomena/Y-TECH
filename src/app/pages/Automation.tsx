@@ -1,34 +1,9 @@
 import { Zap, Workflow, Timer, CheckCircle } from 'lucide-react';
 import { ImageWithFallback } from '../components/I_dontKnow/ImageWithFallback';
+import {NavigateToYMCAMadaOrFomr,Params} from "../components/I_dontKnow/ContactAndJoin"
 
 export default function Automation() {
   const projects = [
-    {
-      title: 'Automatisation de Pipeline CI/CD',
-      description: 'Système complet d\'intégration et déploiement continus avec tests automatisés, analyse de code, build multi-environnements et déploiement orchestré sur Kubernetes.',
-      image: 'https://images.unsplash.com/photo-1647427060118-4911c9821b82?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
-      technologies: ['Jenkins', 'GitLab CI', 'Docker', 'Kubernetes'],
-      features: [
-        'Tests automatisés multi-niveaux',
-        'Analyse qualité de code',
-        'Déploiement multi-environnements',
-        'Rollback automatique',
-        'Monitoring et alertes'
-      ]
-    },
-    {
-      title: 'Système de Gestion Documentaire',
-      description: 'Plateforme d\'automatisation de traitement documentaire avec OCR, classification automatique par IA, extraction de données et archivage intelligent.',
-      image: 'https://images.unsplash.com/photo-1717386255773-1e3037c81788?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
-      technologies: ['Python', 'Tesseract OCR', 'NLP', 'ElasticSearch'],
-      features: [
-        'OCR haute précision',
-        'Classification IA automatique',
-        'Extraction de données structurées',
-        'Recherche full-text avancée',
-        'Workflow validation'
-      ]
-    },
     {
       title: 'Automatisation Marketing Multicanal',
       description: 'Plateforme d\'automatisation marketing avec segmentation intelligente, campagnes multicanales, scoring leads par IA et reporting temps réel.',
@@ -162,17 +137,12 @@ Venez maîtriser les meilleurs outils de flux de travail, libérer le plein pote
       {/* Services Section */}
       <section className="container mx-auto px-6 py-16">
         <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Types d'Automatisation</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {[
             {
               icon: Workflow,
               title: 'Process Automation',
               description: 'Automatisation de workflows métiers complexes et processus répétitifs'
-            },
-            {
-              icon: Zap,
-              title: 'DevOps & CI/CD',
-              description: 'Pipelines automatisés de développement, test et déploiement'
             },
             {
               icon: Timer,
@@ -199,7 +169,7 @@ Venez maîtriser les meilleurs outils de flux de travail, libérer le plein pote
           <p className="text-xl mb-8 opacity-90">
             Identifions ensemble les processus à automatiser dans votre organisation
           </p>
-          <button className="px-10 py-4 bg-white text-red-600 font-bold rounded-lg hover:bg-gray-100 transition-colors shadow-xl">
+          <button onClick={() => NavigateToYMCAMadaOrFomr(Params.Contact)} className="px-10 py-4 bg-white text-red-600 font-bold rounded-lg hover:bg-gray-100 transition-colors shadow-xl">
             Audit gratuit
           </button>
         </div>
